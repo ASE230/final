@@ -7,6 +7,6 @@
     - Account Settings Page
     - Login/Register Page
   - Ethan Fossmeyer
-    - Business Dashboard
-    - Contact/Support Page
-    - Landing Page
+    - Business Dashboard - index.html
+    - Contact/Support Page - form-contact-us.html/pages-faq.html
+    - Landing Page - Account Details page?
