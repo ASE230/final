@@ -31,6 +31,6 @@
     <?php } ?>
 
   <h2>Actions</h2>
-  <a href="index.php"><- list</a>
+  <a href="index.php?email=1&type=1"><- list</a>
 </body>
 </html>

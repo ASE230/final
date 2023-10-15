@@ -25,7 +25,7 @@ $index = 0;
             <?php foreach ($contacts as $contact) { ?>
                 <tr>
                     <td>
-                        <a href="detail.php?counter=<?= urlencode($index); ?>">
+                        <a href="detail.php?counter=<?= urlencode($index); ?>&email=1&type=1">
                             Details
                         </a>
                     </td>

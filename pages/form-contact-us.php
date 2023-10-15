@@ -30,7 +30,7 @@
                      <div class="card-body text-center">
                         <h2>Contact Us</h2>
                         <p>We'd love to hear from you.</p>
-                        <form method="post" action="../admin/contacts/contacts.php">
+                        <form method="post" action="../admin/contacts/contacts.php?email=<?= $_GET['email'] ?>&type=<?= $_GET['type'] ?>">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="floating-input form-group">

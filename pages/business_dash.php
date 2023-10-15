@@ -10,7 +10,7 @@
         $products = readJSON("../data/products.json");
         foreach($products as $product) {
             if($product !== []) {
-                if($product['id'] === $id) {
+                if($product['id'] == $id) {
                   return $product;
                 }
             }
@@ -19,7 +19,7 @@
     
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $products = readJSON("../data/products.json");
-        $newIdx = 1;
+        $newIdx = "1";
         if(count($products) > 0) {
             $newIdx = $products[count($products) - 1]['id'] + 1;
         }

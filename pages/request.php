@@ -4,15 +4,7 @@
   $email = $_GET['email'];
   $id = $_GET['id'];
   $products = readJSON("../data/products.json");
-  $theProduct = [];
-
-  foreach($products as $product) {
-    if($product !== []) {
-      if($product['id'] === $id) {
-        $theProduct = $product;
-      }
-    }
-  }
+  $theProduct = $products[$id - 1];
 
   if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -53,13 +45,6 @@
         <div class="row justify-content-center align-items-center height-self-center">
           <div class="col-md-5 col-sm-12 col-12 align-self-center">
             <div class="card">
-              <?php if($theProduct === []) { ?>
-                <div class="card-body text-center">
-                  <h2>License Request</h2>
-                  <p>We cannot find the product you are requesting a license for.</p>
-                  <a href="explore_products.php?email=<?= $email ?>">Go back</a>
-                </div>
-              <?php } else { ?>
                 <div class="card-body text-center">
                   <h2>License Request</h2>
                   <p>You are requesting a license for "<?= $theProduct['name'] ?>"</p>
@@ -81,7 +66,6 @@
                     <button type="submit" class="btn btn-primary">Request</button>
                   </form>
                 </div>
-              <?php } ?>
             </div>
           </div>
         </div>

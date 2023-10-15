@@ -25,7 +25,7 @@
                 </a>
               </li>
               <li class="">
-                <a href="form-contact-us.php" class="">
+                <a href="form-contact-us.php?email=<?= $email ?>&type=business" class="">
                   <span>Contact Us</span>
                 </a>
               </li>

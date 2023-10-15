@@ -28,8 +28,8 @@
   <title>Delete Product</title>
 </head>
 <body>
-  <h1>Delete Product <?= $products[$index]['name']; ?>?</h1>
-  <form method="POST" action="deleteproduct.php?email=<?= $email ?>&id=<?= $index ?>">
+  <h1>Delete Product <?= $products[$index - 1]['name']; ?>?</h1>
+  <form method="POST" action="deleteproduct.php?email=<?= $email ?>&id=<?= $index - 1 ?>">
     <button type="submit" name="delete" value="1">Yes</button>
     <button type="submit" name="delete" value="0">Cancel</button>
   </form>

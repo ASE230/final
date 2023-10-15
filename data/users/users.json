@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "email": "me@kevin.cafe",
+        "password": "123",
+        "type": "customer"
+    },
+    {
+        "email": "bob@bob.cafe",
+        "password": "123",
+        "type": "business"
+    }
+]

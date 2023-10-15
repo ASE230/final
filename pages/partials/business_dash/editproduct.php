@@ -41,17 +41,17 @@
   <title>Edit Product</title>
 </head>
 <body>
-  <form method="POST" action="editproduct.php?id=<?= $index ?>&email=<?= $email ?>">
+  <form method="POST" action="editproduct.php?id=<?= $index - 1 ?>&email=<?= $email ?>">
     <label>ID</label>
-    <input type="text" name="id" value="<?= $products[$index]['id'] ?>" /> <br />
+    <input type="text" name="id" value="<?= $products[$index - 1]['id'] ?>" /> <br />
     <label>Name</label><br />
-    <input type="text" name="name" value="<?= $products[$index]['name'] ?>" /> <br />
+    <input type="text" name="name" value="<?= $products[$index - 1]['name'] ?>" /> <br />
     <label>Limit</label><br />
-    <input type="text" name="limit" value="<?= $products[$index]['limit'] ?>" /> <br />
+    <input type="text" name="limit" value="<?= $products[$index - 1]['limit'] ?>" /> <br />
     <label>Description</label><br />
-    <textarea name="description" cols="96" rows="4"><?= $products[$index]['description'] ?></textarea><br />
+    <textarea name="description" cols="96" rows="4"><?= $products[$index - 1]['description'] ?></textarea><br />
     <label>Price</label><br />
-    <input type="text" name="price" value="<?= $products[$index]['price'] ?>" /> <br />
+    <input type="text" name="price" value="<?= $products[$index - 1]['price'] ?>" /> <br />
     <button type="submit">Save</button>
     <a href="../../business_dash.php?email=<?= $email ?>">Cancel</a>
   </form>
