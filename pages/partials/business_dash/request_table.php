@@ -25,8 +25,8 @@
                     <div class="dropdown">
                       <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"></div>
                       <div class="dropdown-menu" aria-labelledby="moreOptions1">
-                        <a class="dropdown-item" href="#">Edit</a>
-                        <a class="dropdown-item" href="#">Delete</a>
+                        <a class="dropdown-item" href="#">Approve</a>
+                        <a class="dropdown-item" href="#">Deny</a>
                       </div>
                     </div>
                   </div>

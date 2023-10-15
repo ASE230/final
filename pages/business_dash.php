@@ -1,3 +1,26 @@
+<?php
+    require_once(__DIR__."/../assets/php/json.php");
+
+    function getAllProducts($filePath) {
+        return readJSON($filePath);
+    }
+    
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        // Retrieve the POST data
+        $postData = array(
+            "id" => getAllProducts('../data/products.json')[count(getAllProducts('../data/products.json')) - 1]["id"] + 1,
+            "name" => $_POST["name"],
+            "limit" => $_POST["limit"],
+            "description" => $_POST["description"],
+            "price" => $_POST["price"],
+        );
+    
+        writeJSON('../data/products.json', $postData);
+    
+    } else {
+    }
+?>
+
 <!doctype html>
 <html lang="en">
 

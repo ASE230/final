@@ -29,6 +29,16 @@
                   <span>My Licenses</span>
                 </a>
               </li>
+              <li class="">
+                <a href="form-contact-us.php" class="">
+                  <span>Contact Us</span>
+                </a>
+              </li>
+              <li class="">
+                <a href="faq.php" class="">
+                  <span>Support</span>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -38,69 +48,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto navbar-list align-items-center">
-              <li class="nav-item nav-icon dropdown">
-                <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="las la-bell"></i>
-                  <span class="badge badge-primary count-mail rounded-circle">2</span>
-                  <span class="bg-primary"></span>
-                </a>
-                <div class="iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <div class="card shadow-none m-0">
-                    <div class="card-body p-0 ">
-                      <div class="cust-title p-3">
-                        <h5 class="mb-0">Notifications</h5>
-                      </div>
-                      <div class="p-2">
-                        <a href="#" class="iq-sub-card">
-                          <div class="media align-items-center cust-card p-2">
-                            <div class="">
-                              <img class="avatar-40 rounded-small" src="../assets/images/user/u-1.jpg" alt="01">
-                            </div>
-                            <div class="media-body ml-3">
-                              <div class="d-flex align-items-center justify-content-between">
-                                <h6 class="mb-0">Anne Effit</h6>
-                                <small class="mb-0">02 Min Ago</small>
-                              </div>
-                              <small class="mb-0">Manager</small>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class="iq-sub-card">
-                          <div class="media align-items-center cust-card p-2">
-                            <div class="">
-                              <img class="avatar-40 rounded-small" src="../assets/images/user/u-2.jpg" alt="02">
-                            </div>
-                            <div class="media-body ml-3">
-                              <div class="d-flex align-items-center justify-content-between">
-                                <h6 class="mb-0">Eric Shun</h6>
-                                <small class="mb-0">05 Min Ago</small>
-                              </div>
-                              <small class="mb-0">Manager</small>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class="iq-sub-card">
-                          <div class="media align-items-center cust-card p-2">
-                            <div class="">
-                              <img class="avatar-40 rounded-small" src="../assets/images/user/u-3.jpg" alt="03">
-                            </div>
-                            <div class="media-body ml-3">
-                              <div class="d-flex align-items-center justify-content-between">
-                                <h6 class="mb-0">Ken Tucky</h6>
-                                <small class="mb-0">10 Min Ago</small>
-                              </div>
-                              <small class="mb-0">Employee</small>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                      <a class="right-ic btn-block position-relative p-3 border-top text-center" href="#" role="button">
-                        See All Notification
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </li>
               <li class="caption-content">
                 <a href="#" class="search-toggle dropdown-toggle d-flex align-items-center" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img src="../assets/images/user/01.jpg" class="avatar-40 img-fluid rounded" alt="user">
