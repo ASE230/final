@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>FAQ</title>
+      <title>Support | FAQ</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="../assets/images/favicon.ico" />
@@ -50,23 +50,22 @@
                               <ul id="iq-sidebar-toggle" class="iq-menu d-flex">
                                   <li class="">
                                       <a href="../backend/index.html" class="">
-                                          <span>Dashboard</span>
+                                          <span>Products</span>
                                       </a>
                                   </li>
                                   <li class="">
                                       <a href="../backend/main-my-schedule.html" class="">
-                                          <span>My Schedule</span>
+                                          <span>My Licenses</span>
                                       </a>
                                   </li>
                                   <li class="">
                                       <a href="../backend/main-integration.html" class="">
-                                          <span>Integration</span>
+                                          <span>Contact Us</span>
                                       </a>
                                   </li>
                                   <li class="">
-                                      <a href="#pages" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                          <span>Extra Pages</span>
-                                          <i class="ri-arrow-right-s-line iq-arrow-right"></i>
+                                      <a href="../backend/pages-faq.php" class="">
+                                          <span>Support</span>
                                       </a>
                                   </li>
                               </ul>

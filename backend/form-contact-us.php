@@ -62,7 +62,7 @@
                            </div>
                            <button type="submit" class="btn btn-primary">Submit</button>
                            <p class="mt-3">
-                              Need help? <a href="auth-sign-in.html" class="text-primary">Check our Support page</a>
+                              Need help? <a href="pages-faq.php" class="text-primary">Check our Support page</a>
                            </p>
                         </form>
                      </div>
