@@ -8,5 +8,5 @@
     - Login/Register Page
   - Ethan Fossmeyer
     - Business Dashboard - index.html
-    - Contact/Support Page - form-contact-us.html/pages-faq.html
+    - Contact/Support Page - form-contact-us.html/pages-faq.html - DONE
     - Landing Page - Account Details page?
