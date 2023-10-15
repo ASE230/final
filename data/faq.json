@@ -1,0 +1,30 @@
+[
+    {
+        "title":"How do I get in contact with your team?",
+        "body":"Please visit the Contact us page and fill out the presented form."
+    },
+    {
+        "title":"How do I register for a new account?",
+        "body":"You can visit our Registration page to fill out your details for a new account. This page can be accessed via the profile picture in the top right of the website and pressing \"Login\"."
+    },
+    {
+        "title":"How do I create a License Request as a Customer?",
+        "body":"On the Customer Dashboard page, under the \"Licenses\" header, there is a button labeled \"Create Request\"."
+    },
+    {
+        "title":"How do I approve/deny a License Request as a Business Owner?",
+        "body":"On the Business Dashboard page, under the \"License Requests\" header, you can view and accept/deny each request."
+    },
+    {
+        "title":"How do I create a Product as a Business Owner?",
+        "body":"On the Business Dashboard page, under the \"Products\" header, there is the ability to create Products."
+    },
+    {
+        "title":"What if I have so many Products/Licenses that they do not fit on one page?",
+        "body":"We have implemented a search feature for this reason. The search bar can be used to query any items that cannot immediately be seen."
+    },
+    {
+        "title":"How will I know if my License Request has been approved, or if someone has requested a License from me?",
+        "body":"There is a notifications system that exists in the top right of any webpage - through this feature, any notification will be passed onto you."
+    }
+]
