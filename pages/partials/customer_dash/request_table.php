@@ -16,23 +16,24 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>OpenAI All Access</td>
-              <td>10/04/2023</td>
-              <td>
-                <div class="d-flex align-items-center list-action">
-                  <div class="badge bg-primary-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Action">
-                    <div class="dropdown">
-                      <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"></div>
-                      <div class="dropdown-menu" aria-labelledby="moreOptions1">
-                        <a class="dropdown-item" href="#">Edit</a>
-                        <a class="dropdown-item" href="#">Delete</a>
+            <?php foreach($myRequests as $idx => $request) { ?>
+              <tr>
+                <td><?= findProduct($request['request']['productId'])['name'] ?></td>
+                <td><?= $request['request']['date'] ?></td>
+                <td>
+                  <div class="d-flex align-items-center list-action">
+                    <div class="badge bg-primary-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Action">
+                      <div class="dropdown">
+                        <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"></div>
+                        <div class="dropdown-menu" aria-labelledby="moreOptions1">
+                          <a class="dropdown-item" href="delete_request.php?id=<?= $request['index']; ?>&email=<?= $email ?>">Delete</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </td>
-            </tr>
+                </td>
+              </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>

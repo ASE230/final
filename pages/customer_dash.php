@@ -1,3 +1,47 @@
+<?php
+    require_once('../assets/php/json.php');
+    $email = $_GET['email'];
+
+    $requests = readJSON("../data/requests.json");
+    $myRequests = [];
+
+    foreach($requests as $idx => $request) {
+        if($request !== []) {
+            if($request['email'] === $email) {
+                $requestWithIndex = [
+                    'request' => $request,
+                    'index' => $idx
+                ];
+                $myRequests[] = $requestWithIndex;
+            }
+        }
+    }
+
+    $licenses = readJSON("../data/license.json");
+    $myLicense = [];
+    
+    foreach ($licenses as $idx => $license) {
+        if($license !== []) {
+            if ($license['email'] == $email) {
+                $licenseWithIndex = [
+                    'license' => $license,
+                    'index' => $idx
+                ];
+                $myLicense[] = $licenseWithIndex;
+            }
+        } 
+    }
+
+    function findProduct($id) {
+        $products = readJSON("../data/products.json");
+        foreach($products as $product) {
+          if($product['id'] === $id) {
+            return $product;
+          }
+        }
+    }
+?>
+
 <!doctype html>
 <html lang="en">
 

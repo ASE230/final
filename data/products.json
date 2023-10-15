@@ -1,0 +1,9 @@
+[
+  {
+    "id": "1",  
+    "name": "OpenAI All Access",
+    "limit": 1,
+    "description": "Gain access to all of OpenAI's current and future products for a lifetime",
+    "price": 5000
+  }
+]
