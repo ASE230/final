@@ -193,6 +193,9 @@
                     <div class="navbar-breadcrumb">
                         <h1 class="mb-1">Products</h1>
                     </div>
+                    <div class="create-workflow">
+                        <a href="#" class="btn btn-danger mr-3 px-xl-3">Add Product</a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 tab-extra" id="view-event">
