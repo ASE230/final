@@ -12,10 +12,5 @@
         <div class="float-md-right mb-4"><a href="#event1" class="btn view-btn">View Event</a></div>
       </div>
     </div>
-    <div class="tab-extra active" id="search-with-button">
-      <div class="iq-search-bar d-flex flex-wrap align-items-center search-device mb-4 pr-3">
-        <input class="form-control bg-white border text search-input" type="text" placeholder="Search...">
-      </div>
-    </div>
   </div>
 </div>

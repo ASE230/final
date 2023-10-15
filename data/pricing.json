@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Business Owner",
+        "description": "Create your own product for product explorers to find and purchase!",
+        "price": "$25"
+    },
+    {
+        "name": "Product Explorer",
+        "description": "Explore existing products from business owners looking for clients!",
+        "price": "$15"
+    },
+    [],
+    []
+]

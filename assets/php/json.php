@@ -78,5 +78,4 @@ function deleteJSON($array, $filepath, $data) {
         return false;
     }
 }
-
 ?>
