@@ -1,9 +1,16 @@
 [
-  {
-    "id": "1",  
-    "name": "OpenAI All Access",
-    "limit": 1,
-    "description": "Gain access to all of OpenAI's current and future products for a lifetime",
-    "price": 5000
-  }
+    {
+        "id": "1",
+        "name": "Test",
+        "limit": "1",
+        "description": "yeah",
+        "price": "33"
+    },
+    {
+        "id": "2",
+        "name": "Google",
+        "limit": "1",
+        "description": "Google haterssehehrher",
+        "price": "5000"
+    }
 ]

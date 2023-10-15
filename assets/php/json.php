@@ -60,4 +60,22 @@ function updateJSON($array, $filepath, $uniqueIdentifier, $newData) {
     }
 }
 
+function deleteJSON($array, $filepath, $data) {
+    if (isset($array[$data])) {
+        unset($array[$data]);
+        $updatedJsonContents = json_encode($array, JSON_PRETTY_PRINT);
+
+        if ($updatedJsonContents === false) {
+            return false;
+        }
+
+        if (file_put_contents($filepath, $updatedJsonContents) === false) {
+            return false;
+        }
+
+        return true;
+    } else {
+        return false;
+    }
+}
 ?>
