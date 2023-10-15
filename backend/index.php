@@ -55,7 +55,7 @@
                                       </a>
                                     </li>
                                     <li class="">
-                                      <a href="../backend/main-my-schedule.html" class="">
+                                      <a href="../backend/form-contact-us.php" class="">
                                           <span>Contact Us</span>
                                       </a>
                                 </li>

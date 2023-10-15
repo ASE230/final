@@ -33,12 +33,12 @@
                      <div class="card-body text-center">
                         <h2>Contact Us</h2>
                         <p>We'd love to hear from you.</p>
-                        <form>
+                        <form method="post" action="../admin/contacts/contacts.php">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="floating-input form-group">
-                                    <input class="form-control" type="text" name="fullname" id="fullname" required />
-                                    <label class="form-label" for="fullname">First Name</label>
+                                    <input class="form-control" type="text" name="firstname" id="firstname" required />
+                                    <label class="form-label" for="firstname">First Name</label>
                                  </div>
                               </div>
                               <div class="col-lg-6">
@@ -55,8 +55,8 @@
                               </div>
                               <div class="col-lg-12">
                                  <div class="floating-input form-group">
-                                    <input class="form-control" type="text" name="email" id="email" required />
-                                    <label class="form-label" for="email">Message</label>
+                                    <input class="form-control" type="text" name="message" id="message" required />
+                                    <label class="form-label" for="message">Message</label>
                                  </div>
                               </div>
                            </div>
