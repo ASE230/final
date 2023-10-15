@@ -7,8 +7,10 @@
   $theProduct = [];
 
   foreach($products as $product) {
-    if($product['id'] === $id) {
-      $theProduct = $product;
+    if($product !== []) {
+      if($product['id'] === $id) {
+        $theProduct = $product;
+      }
     }
   }
 

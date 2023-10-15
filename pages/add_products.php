@@ -1,3 +1,7 @@
+<?php
+   $email = $_GET['email'];
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +34,7 @@
                      <div class="card-body text-center">
                         <h2>Add Products</h2>
                         <p>Create a new product here.</p>
-                        <form method="post" action="business_dash.php">
+                        <form method="post" action="business_dash.php?email=<?= $email ?>">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="floating-input form-group">

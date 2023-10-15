@@ -33,8 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             );
 
             updateJSON($users, "../data/users/users.json", $idx, $user);
-            header('Location: customer_dash.php?email='.$_email);
-            exit();
+            if($user['type'] === 'customer') {
+                header('Location: customer_dash.php?email='.$_email);
+                exit();
+            } else {
+                header('Location: business_dash.php?email='.$_email);
+                exit();
+            }
         }
     }
 }

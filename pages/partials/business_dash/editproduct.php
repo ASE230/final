@@ -6,8 +6,9 @@
       return readJSON($filePath);
   }
 
-  $indexGET = $_GET['id'];
-  $index = $indexGET - 1;
+  $email = $_GET['email'];
+
+  $index = $_GET['id'];
   $jsonFilePath = '../../../data/products.json';
 
   $products = getAllProducts($jsonFilePath);
@@ -29,7 +30,7 @@
 
     updateJSON($products, $jsonFilePath, $index, $memberData);
 
-    header('Location: ../../business_dash.php');
+    header('Location: ../../business_dash.php?email='.$email);
 
     exit();
   }
@@ -40,7 +41,7 @@
   <title>Edit Product</title>
 </head>
 <body>
-  <form method="POST" action="editproduct.php?id=<?= $indexGET ?>">
+  <form method="POST" action="editproduct.php?id=<?= $index ?>&email=<?= $email ?>">
     <label>ID</label>
     <input type="text" name="id" value="<?= $products[$index]['id'] ?>" /> <br />
     <label>Name</label><br />
@@ -52,7 +53,7 @@
     <label>Price</label><br />
     <input type="text" name="price" value="<?= $products[$index]['price'] ?>" /> <br />
     <button type="submit">Save</button>
-    <a href="../../business_dash.php">Cancel</a>
+    <a href="../../business_dash.php?email=<?= $email ?>">Cancel</a>
   </form>
 </body>
 </html>

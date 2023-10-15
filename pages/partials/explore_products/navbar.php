@@ -44,9 +44,8 @@
             <ul class="navbar-nav ml-auto navbar-list align-items-center">
               <li class="caption-content">
                 <a href="#" class="search-toggle dropdown-toggle d-flex align-items-center" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="../assets/images/user/01.jpg" class="avatar-40 img-fluid rounded" alt="user">
                   <div class="caption ml-3">
-                    <h6 class="mb-0 line-height">Rick O'shea<i class="las la-angle-down ml-3"></i></h6>
+                    <h6 class="mb-0 line-height">My Account<i class="las la-angle-down ml-3"></i></h6>
                   </div>
                 </a>
                 <div class="iq-sub-dropdown dropdown-menu user-dropdown" aria-labelledby="dropdownMenuButton3">
@@ -60,7 +59,7 @@
                           </div>
                         </a>
                       </div>
-                      <a class="right-ic p-3 border-top btn-block position-relative text-center" href="auth-sign-in.html" role="button">
+                      <a class="right-ic p-3 border-top btn-block position-relative text-center" href="login.php" role="button">
                         Logout
                       </a>
                     </div>

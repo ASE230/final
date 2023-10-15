@@ -2,6 +2,7 @@
   <div class="row">
 
     <?php foreach($products as $product) { ?>
+      <?php if($product !== []) { ?>
       <div class="col-lg-4 col-md-6">
         <div class="card card-block card-stretch card-height">
           <div class="card-body rounded event-detail event-detail-success">
@@ -19,6 +20,7 @@
           </div>
         </div>
       </div>
+      <?php } ?>
     <?php } ?>
     
   </div>

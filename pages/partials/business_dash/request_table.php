@@ -16,23 +16,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>OpenAI All Access</td>
-              <td>10/04/2023</td>
-              <td>
-                <div class="d-flex align-items-center list-action">
-                  <div class="badge bg-primary-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Action">
-                    <div class="dropdown">
-                      <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"></div>
-                      <div class="dropdown-menu" aria-labelledby="moreOptions1">
-                        <a class="dropdown-item" href="#">Approve</a>
-                        <a class="dropdown-item" href="#">Deny</a>
+            <?php foreach($requests as $idx => $request) { ?>
+              <?php if($request !== []) { ?>
+                <tr>
+                  <td><?= findProduct($request['productId'])['name'] ?></td>
+                  <td><?= $request['date'] ?></td>
+                  <td>
+                    <div class="d-flex align-items-center list-action">
+                      <div class="badge bg-primary-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Action">
+                        <div class="dropdown">
+                          <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"></div>
+                          <div class="dropdown-menu" aria-labelledby="moreOptions1">
+                            <a class="dropdown-item" href="./partials/business_dash/approve.php?id=<?= $idx ?>&_email=<?= $request['email'] ?>&email=<?= $email ?>&productId=<?= $request['productId'] ?>&count=<?= findProduct($request['productId'])['limit'] ?>">Approve</a>
+                            <a class="dropdown-item" href="./partials/business_dash/deny.php?id=<?= $idx ?>">Deny</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
+                  </td>
+                </tr>
+              <?php } ?>
+            <?php } ?>
           </tbody>
         </table>
       </div>

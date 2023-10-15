@@ -1,6 +1,6 @@
 <?php
-  require_once("business_dash.php");
-  $products = getAllProducts("../data/products.json");
+  // require_once("business_dash.php");
+  // $products = getAllProducts("../data/products.json");
 
 ?>
 
@@ -10,7 +10,7 @@
       <div class="iq-header-title">
         <h4 class="card-title mb-0">Active Products</h4>
       </div>
-      <a href="add_products.php" class="btn btn-danger mr-3 px-xl-3">Add Products</a>
+      <a href="add_products.php?email=<?= $email ?>" class="btn btn-danger mr-3 px-xl-3">Add Products</a>
     </div>
     <div class="card-body">
       <div class="table-responsive data-table">
@@ -28,6 +28,7 @@
           <tbody>
             <tr>
             <?php foreach ($products as $product) { ?>
+              <?php if($product !== []) { ?>
               <tr>
                 <td><?php echo $product["id"]; ?></td>
                 <td><?php echo $product["name"]; ?></td>
@@ -41,14 +42,15 @@
                         <div class="text-primary dropdown-toggle action-item" id="moreOptions1" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
                         </div>
                         <div class="dropdown-menu" aria-labelledby="moreOptions1">
-                          <a class="dropdown-item" href="partials/business_dash/editproduct.php?id=<?= urlencode($product["id"]); ?>">Edit</a>
-                          <a class="dropdown-item" href="partials/business_dash/deleteproduct.php?id=<?= urlencode($product["id"]); ?>">Delete</a>
+                          <a class="dropdown-item" href="partials/business_dash/editproduct.php?id=<?= urlencode($product["id"]); ?>&email=<?= $email ?>">Edit</a>
+                          <a class="dropdown-item" href="partials/business_dash/deleteproduct.php?id=<?= urlencode($product["id"]); ?>&email=<?= $email ?>">Delete</a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </td>
               </tr>
+              <?php } ?>
             <?php } ?>
             </tr>
           </tbody>

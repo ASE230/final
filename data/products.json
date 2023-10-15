@@ -1,16 +1,1 @@
-[
-    {
-        "id": "1",
-        "name": "Test",
-        "limit": "1",
-        "description": "yeah",
-        "price": "33"
-    },
-    {
-        "id": "2",
-        "name": "Google",
-        "limit": "1",
-        "description": "Google haterssehehrher",
-        "price": "5000"
-    }
-]
+[]

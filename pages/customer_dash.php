@@ -35,9 +35,11 @@
     function findProduct($id) {
         $products = readJSON("../data/products.json");
         foreach($products as $product) {
-          if($product['id'] === $id) {
-            return $product;
-          }
+            if($product !== []) {
+                if($product['id'] === $id) {
+                  return $product;
+                }
+            }
         }
     }
 ?>

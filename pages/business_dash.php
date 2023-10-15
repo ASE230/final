@@ -1,14 +1,31 @@
 <?php
-    require_once(__DIR__."/../assets/php/json.php");
+    require_once("../assets/php/json.php");
 
-    function getAllProducts($filePath) {
-        return readJSON($filePath);
+    $email = $_GET['email'];
+
+    $products = readJSON("../data/products.json");
+    $requests = readJSON("../data/requests.json");
+
+    function findProduct($id) {
+        $products = readJSON("../data/products.json");
+        foreach($products as $product) {
+            if($product !== []) {
+                if($product['id'] === $id) {
+                  return $product;
+                }
+            }
+        }
     }
     
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $products = readJSON("../data/products.json");
+        $newIdx = 1;
+        if(count($products) > 0) {
+            $newIdx = $products[count($products) - 1]['id'] + 1;
+        }
         // Retrieve the POST data
         $postData = array(
-            "id" => getAllProducts('../data/products.json')[count(getAllProducts('../data/products.json')) - 1]["id"] + 1,
+            "id" => $newIdx,
             "name" => $_POST["name"],
             "limit" => $_POST["limit"],
             "description" => $_POST["description"],
@@ -16,6 +33,7 @@
         );
     
         writeJSON('../data/products.json', $postData);
+        header('Location: business_dash.php?email='.$email);
     
     } else {
     }
