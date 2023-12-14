@@ -1,14 +1,15 @@
-# License-Request-Webapp
-
+# ASE 230 Final Project
 
 # Team Members
   - Kevin Muscara
-    - Customer Dashboard
-    - Account Settings Page
-    - Login/Register Page
+    - Admin Entities
+    - Styling
+    - Queries
+      - 
+      - 
   - Ethan Fossmeyer
-    - Business Dashboard - index.html
-    - Contact/Support Page - form-contact-us.html/pages-faq.html - DONE
-    - Landing Page - Account Details page?
-
-Video presentation: https://www.youtube.com/watch?v=mRJn3hxqq94
+    - Authentication
+    - Video/Slide Presentation
+    - Queries
+      - 
+      - 
