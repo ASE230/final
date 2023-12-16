@@ -1,54 +1,6 @@
 <?php
-   require_once('../assets/php/json.php');
-   function findUser($email) {
-      $theUser = [];
-
-      $users = readJSON("../data/users/users.json");
-
-      foreach($users as $user) {
-         if($user['email'] === $email) {
-            $theUser = $user;
-         }
-      }
-
-      return $theUser;
-   }
-
-   function createUser($email, $password, $type) {
-      $postData = array(
-         "email" => $email,
-         "password" => $password,
-         "type" => $type,
-      );
-
-      writeJSON("../data/users/users.json", $postData);
-   }
-
-   if($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $email = $_POST['email'];
-      $password = $_POST['password'];
-      
-      $type = 'business';
-      
-      if($_POST['customCheck1'] == null) {
-         $type = 'customer';
-      }
-
-      $user = findUser($email);
-      
-      if($user === []) {
-         createUser($email, $password, $type);
-         if($type == 'customer') {
-            header('Location: customer_dash.php?email='.$email);
-            exit();
-         } else {
-            header('Location: business_dash.php?email='.$email);
-            exit();
-         }
-      } else {
-         print_r("An account with that email address already exists");
-      }
-   }
+   require_once('../lib/settings.php');
+   require_once('../lib/db.php');
 ?>
 
 
@@ -78,18 +30,24 @@
                      <div class="card-body text-center">
                         <h2>Register</h2>
                         <p>Create your Licensify account.</p>
-                        <form method="POST" action="register.php">
+                        <?php
+                        if (isset($_SESSION['error'])) {
+                        echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
+                        unset($_SESSION['error']); // Clear the error message after displaying it
+                        }
+                        ?>
+                        <form method="POST" action="../lib/auth.php">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="floating-input form-group">
-                                    <input class="form-control" type="text" name="firstName" id="firstName" required />
-                                    <label class="form-label" for="firstName">First Name</label>
+                                    <input class="form-control" type="text" name="first_name" id="first_name" required />
+                                    <label class="form-label" for="first_name">First Name</label>
                                  </div>
                               </div>
                               <div class="col-lg-6">
                                  <div class="floating-input form-group">
-                                    <input class="form-control" type="text" name="lastname" id="lastname" required />
-                                    <label class="form-label" for="lastname">Last Name</label>
+                                    <input class="form-control" type="text" name="last_name" id="last_name" required />
+                                    <label class="form-label" for="last_name">Last Name</label>
                                  </div>
                               </div>
                               <div class="col-lg-12">
@@ -98,16 +56,10 @@
                                     <label class="form-label" for="email">Email</label>
                                  </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-12">
                                  <div class="floating-input form-group">
                                     <input class="form-control" type="password" name="password" id="password" required />
                                     <label class="form-label" for="password">Password</label>
-                                 </div>
-                              </div>
-                              <div class="col-lg-6">
-                                 <div class="floating-input form-group">
-                                    <input class="form-control" type="password" name="password" id="password1" required />
-                                    <label class="form-label" for="password1">Confirm Password</label>
                                  </div>
                               </div>
                               <div class="col-lg-12">
@@ -117,7 +69,7 @@
                                  </div>
                               </div>
                            </div>
-                           <button type="submit" class="btn btn-primary">Register</button>
+                           <button type="submit" class="btn btn-primary" name="action" value="signup">Register</button>
                            <p class="mt-3">
                               Already have an Account <a href="login.php" class="text-primary">Login</a>
                            </p>
