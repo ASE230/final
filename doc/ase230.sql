@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 14, 2023 at 06:03 PM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 16, 2023 at 05:20 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -35,13 +35,6 @@ CREATE TABLE `licenses` (
   `license_value` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `licenses`
---
-
-INSERT INTO `licenses` (`license_id`, `product_id`, `user_id`, `expiration_date`, `license_value`) VALUES
-(1, 2, 2, '2024-12-14', 'c22b5f9178342609428d6f51b2c5af4c0bde6a42');
-
 -- --------------------------------------------------------
 
 --
@@ -54,14 +47,6 @@ CREATE TABLE `license_requests` (
   `user_id` int(3) NOT NULL,
   `request_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `license_requests`
---
-
-INSERT INTO `license_requests` (`request_id`, `product_id`, `user_id`, `request_date`) VALUES
-(1, 1, 2, '2023-12-14'),
-(2, 3, 3, '2023-12-14');
 
 -- --------------------------------------------------------
 
@@ -78,15 +63,6 @@ CREATE TABLE `products` (
   `user_id` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `products`
---
-
-INSERT INTO `products` (`product_id`, `product_name`, `product_description`, `product_price`, `product_limit_per_purchase`, `user_id`) VALUES
-(1, 'Product A', 'Description for Product A', 25.99, 5, 1),
-(2, 'Product B', 'Description for Product B', 49.99, 10, 1),
-(3, 'Product C', 'Description for Product C', 15.50, 8, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -95,19 +71,22 @@ INSERT INTO `products` (`product_id`, `product_name`, `product_description`, `pr
 
 CREATE TABLE `users` (
   `user_id` int(3) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
   `account_type` varchar(8) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `PASSWORD` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `account_type`, `email`, `PASSWORD`) VALUES
-(1, 'business', 'business@example.com', 'businesspassword'),
-(2, 'customer', 'customer1@example.com', 'customer1password'),
-(3, 'customer', 'customer2@example.com', 'customer2password');
+INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `account_type`, `email`, `password`) VALUES
+(6, 'Ethan', 'Fossmeyer', '', 'ethan@fossmeyer.com', '$2y$10$L6DeHrSYFHzh6HPcYDachOZISBBxwvbb1Q.6yEPIXn5s5/M/uwu4a'),
+(7, 'asfasf', 'asfasf', '', 'monkey@gmail.com', '$2y$10$3bPFvVjv3MM87kIUkufUseEB1LV5qsCXwbMwSw2G1qEjxEX69FTHq'),
+(8, 'ethan', 'ff', 'business', 'kinkala@e.com', '$2y$10$CPYl4JyDYAQ3XNOTQwoJQOgyolLAP0zcTHF4z3.zFz77OqfGHzxcG'),
+(9, 'ethan', 'ff', 'customer', 'monkala@e.com', '$2y$10$4LlJWTexu5D0PUmPtsgivOt6GH3dYlj1DAM1s96QyjfSR06sHEBnG');
 
 --
 -- Indexes for dumped tables
@@ -151,25 +130,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `licenses`
 --
 ALTER TABLE `licenses`
-  MODIFY `license_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `license_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `license_requests`
 --
 ALTER TABLE `license_requests`
-  MODIFY `request_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `request_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
