@@ -13,3 +13,11 @@
     - Queries
       - Users
       - Products
+
+User Acc:
+  Username(email): ethan@fossmeyer.com
+  Password: password
+
+No admin acc :(
+
+Youtube video: https://youtu.be/HjvwtOOdxn4
