@@ -1,37 +1,6 @@
 <?php
-   require_once('../assets/php/json.php');
-   function findUser($email) {
-      $theUser = [];
-
-      $users = readJSON("../data/users/users.json");
-
-      foreach($users as $user) {
-         if($user['email'] === $email) {
-            $theUser = $user;
-         }
-      }
-
-      return $theUser;
-   }
-
-   if($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $email = $_POST['email'];
-      $password = $_POST['password'];
-
-      $user = findUser($email);
-      
-      if($password === $user['password']) {
-         if($user['type'] === 'customer') {
-            header('Location: customer_dash.php?email='.$email);
-            exit();
-         } else {
-            header('Location: business_dash.php?email='.$email);
-            exit();
-         }
-      } else {
-         print_r("Incorrect password");
-      }
-   }
+   require_once('../lib/settings.php');
+   require_once('../lib/db.php');
 ?>
 
 <!doctype html>
@@ -60,7 +29,13 @@
                      <div class="card-body text-center">
                         <h2>Login</h2>
                         <p>Login to stay connected.</p>
-                        <form method="POST" action="login.php">
+                        <?php
+                        if (isset($_SESSION['error'])) {
+                        echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
+                        unset($_SESSION['error']); // Clear the error message after displaying it
+                        }
+                        ?>
+                        <form action="../lib/auth.php" method="POST" >
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="floating-input form-group">
@@ -75,7 +50,7 @@
                                  </div>
                               </div>
                            </div>
-                           <button type="submit" class="btn btn-primary">Login</button>
+                           <button type="submit" name="action" value="signin" class="btn btn-primary">Login</button>
                            <p class="mt-3">
                               Create an Account <a href="register.php" class="text-primary">Register</a>
                            </p>
